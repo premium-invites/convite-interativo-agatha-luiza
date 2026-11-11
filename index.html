@@ -15,24 +15,25 @@
   <meta name="theme-color" content="#071635">
   <title>Convite de 15 anos de Ágatha Luiza</title>
 
-  <!-- IMPORTANTE: confirme a URL pública final do GitHub Pages em og:url, og:image, og:image:secure_url e twitter:image. -->
-  <!-- Base presumida a partir do projeto original: confirme seu usuário real do GitHub antes de compartilhar. -->
+  <!-- URL pública confirmada: premium-invites.github.io/convite-interativo-agatha-luiza -->
+  <!-- Os arquivos de mídia ficam na raiz do repositório, ao lado deste index.html. -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Convite de 15 anos de Ágatha Luiza">
   <meta property="og:description" content="Ágatha Luiza · 15 anos · 22/05/2027 às 21h. Abra seu convite especial!">
-  <meta property="og:url" content="https://convitepremium.github.io/convite-interativo-agatha-luiza/">
-  <meta property="og:image" content="https://convitepremium.github.io/convite-interativo-agatha-luiza/assets/preview-whatsapp.jpg">
-  <meta property="og:image:secure_url" content="https://convitepremium.github.io/convite-interativo-agatha-luiza/assets/preview-whatsapp.jpg">
+  <meta property="og:url" content="https://premium-invites.github.io/convite-interativo-agatha-luiza/">
+  <meta property="og:image" content="https://premium-invites.github.io/convite-interativo-agatha-luiza/preview-whatsapp.jpg?v=2">
+  <meta property="og:image:secure_url" content="https://premium-invites.github.io/convite-interativo-agatha-luiza/preview-whatsapp.jpg?v=2">
   <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Ágatha Luiza — 15 anos — 22 de maio de 2027">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Convite de 15 anos de Ágatha Luiza">
   <meta name="twitter:description" content="Ágatha Luiza · 15 anos · 22/05/2027 às 21h. Abra seu convite especial!">
-  <meta name="twitter:image" content="https://convitepremium.github.io/convite-interativo-agatha-luiza/assets/preview-whatsapp.jpg">
+  <meta name="twitter:image" content="https://premium-invites.github.io/convite-interativo-agatha-luiza/preview-whatsapp.jpg?v=2">
   <!-- Fim do bloco de preview -->
 
-  <link rel="preload" href="assets/opening.webp" as="image">
+  <link rel="preload" href="opening.webp" as="image">
   <style>
     *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
     html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
@@ -41,11 +42,11 @@
     .screen::before{content:"";position:absolute;inset:-24px;background:var(--bg-img) center/cover no-repeat;filter:blur(18px);transform:scale(1.08);opacity:.55}
     .stage{position:relative;z-index:1;width:min(100vw,56.28vh);width:min(100vw,56.28svh);height:auto;aspect-ratio:941/1672;max-height:100svh}
     .art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;user-select:none;-webkit-user-drag:none;z-index:1}
-    #opening{cursor:pointer;--bg-img:url('assets/opening.webp')}
-    #mainScreen{--bg-img:url('assets/principal.webp')}
-    #dressScreen{--bg-img:url('assets/dresscode.webp')}
-    #manualScreen{--bg-img:url('assets/manual.webp')}
-    #videoScreen{--bg-img:url('assets/principal.webp')}
+    #opening{cursor:pointer;--bg-img:url('opening.webp')}
+    #mainScreen{--bg-img:url('principal.webp')}
+    #dressScreen{--bg-img:url('dresscode.webp')}
+    #manualScreen{--bg-img:url('manual.webp')}
+    #videoScreen{--bg-img:url('principal.webp')}
     #videoPlayer{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:contain;background:#000}
     .hotspot{position:absolute;border:0;background:transparent;cursor:pointer;z-index:5}
     .pix-copy{position:absolute;border:0;background:transparent;cursor:pointer;z-index:6}
@@ -110,19 +111,19 @@
   <main>
     <section id="opening" class="screen active" aria-label="Abrir convite">
       <div class="stage">
-        <img class="art" src="assets/opening.webp" alt="Clique para abrir o convite" width="941" height="1672">
+        <img class="art" src="opening.webp" alt="Clique para abrir o convite" width="941" height="1672">
         <button class="tap-btn" id="tapBtn" type="button" aria-label="Abrir convite">Toque para abrir</button>
       </div>
     </section>
 
     <section id="videoScreen" class="screen" aria-label="Vídeo do convite">
-      <div class="stage"><video id="videoPlayer" data-src="assets/video.mp4" preload="none" muted playsinline webkit-playsinline></video></div>
+      <div class="stage"><video id="videoPlayer" data-src="video.mp4" preload="none" muted playsinline webkit-playsinline></video></div>
       <button class="skip" id="skipBtn" type="button">Pular vídeo</button>
     </section>
 
     <section id="mainScreen" class="screen" aria-label="Convite principal">
       <div class="stage" id="mainStage">
-        <img class="art" src="assets/principal.webp" alt="Convite" loading="eager" width="941" height="1672">
+        <img class="art" src="principal.webp" alt="Convite" loading="eager" width="941" height="1672">
         <button class="hotspot" id="confirmBtn" data-key="confirm" data-label="WhatsApp" aria-label="Confirmar presença"></button>
         <button class="hotspot" id="mapBtn" data-key="map" data-label="Localização" aria-label="Abrir localização"></button>
         <button class="hotspot" id="dressBtn" data-key="dress" data-label="Dress Code" aria-label="Ver dress code"></button>
@@ -134,14 +135,14 @@
 
     <section id="dressScreen" class="screen" aria-label="Dress code">
       <div class="stage" id="dressStage">
-        <img class="art" src="assets/dresscode.webp" alt="Dress code" loading="lazy" width="941" height="1672">
+        <img class="art" src="dresscode.webp" alt="Dress code" loading="lazy" width="941" height="1672">
         <button class="back" id="dressBackBtn" data-key="backDress" data-label="Voltar — Dress Code">Voltar</button>
       </div>
     </section>
 
     <section id="manualScreen" class="screen" aria-label="Manual do convidado">
       <div class="stage" id="manualStage">
-        <img class="art" src="assets/manual.webp" alt="Manual do convidado" loading="lazy" width="941" height="1672">
+        <img class="art" src="manual.webp" alt="Manual do convidado" loading="lazy" width="941" height="1672">
         <button class="back" id="manualBackBtn" data-key="backManual" data-label="Voltar — Manual do Convidado">Voltar</button>
       </div>
     </section>
@@ -178,7 +179,7 @@
     <textarea id="exportBox" readonly placeholder="Aqui aparece o código para colar no config.js e deixar permanente."></textarea>
   </div>
 
-  <audio id="music" src="assets/musica.mp3" preload="auto" loop></audio>
+  <audio id="music" src="musica.mp3" preload="auto" loop></audio>
 
   <!-- config.js DEVE carregar antes da engine -->
   <script src="config.js"></script>
